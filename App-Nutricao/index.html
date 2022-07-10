@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Pagina Inicial</title>
+</head>
+
+<body>
+    <header></header>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon"><ion-icon name="home"></ion-icon></span>
+                    <span class="title">Página Inicial<span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="clipboard"></ion-icon></span>
+                    <span class="title">Anamnese<span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="restaurant"></ion-icon></span>
+                    <span class="title">Frequência Alimentar<span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="body"></ion-icon></span>
+                    <span class="title">Avaliação Física<span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="pizza"></ion-icon></span>
+                    <span class="title">Recordatório 24 Horas<span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="medkit"></ion-icon></span>
+                    <span class="title">Exames Laboratoriais<span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="pulse"></ion-icon></span>
+                    <span class="title">Sinais e Sintomas<span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="calculator"></ion-icon></span>
+                    <span class="title">Gastos Energéticos<span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="nutrition"></ion-icon></span>
+                    <span class="title">Plano Alimentar<span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <form action="">
+            <h3>Dados da Criança</h3>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" name="nome" id="nome">
+            <label for="datanasc">Data de Nascimento:</label>
+            <input type="date" name="datanasc" id="datanasc">
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade">
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" id="sexo">
+                <option value="F">Feminino</option>
+                <option value="M">Masculino</option>
+            </select>
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone">
+            <label for="responsavel">Responsável:</label>
+            <input type="text" name="responsavel" id="responsavel">
+            <label for="parentesco">Grau de Parentesco:</label>
+            <input type="text" name="parentesco" id="parentesco">
+        </form>
+        <form action="">
+            <h3>Observações Gerais</h3>
+            <label for="objetivo">Objetivo com a consulta</label>
+            <input type="text" id="objetivo" name="objetivo">
+            <label for="objetivo_avaliacao">De 0 a 10, quanto esse objetivo é importante para você? </label>
+            <input type="text" id="objetivo_avaliacao" name="objetivo_avaliacao">
+            <label for="motivacao">O que te levou a buscar um Nutricionista para o seu filho?</label>
+            <input type="text" id="motivacao" name="motivacao">
+            <label for="expectativa">O que espera de mim como sua Nutricionista? Como acha que eu posso te
+                ajudar?</label>
+            <input type="text" id="expectativa" name="expectativa">
+            <label for="tratamento_anterior">Já foi em algum nutricionista? Quais recomendações foram feitas? O que
+                funcionou?</label>
+            <input type="text" id="tratamento_anterior" name="tratamento_anterior">
+            <label for="barreiras">Quais são as principais dificuldades que você enfrenta hoje?</label>
+            <input type="text" id="barreiras" name="barreiras">
+        </form>
+
+
+    </main>
+    <footer></footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+            list.forEach((item) =>
+            item.addEventListener('click', activeLink));
+        
+    </script>
+
+</body>
+
+</html>
